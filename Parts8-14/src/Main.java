@@ -6,6 +6,42 @@ public class Main {
 
     }
 
+
+
+    //StorageFacility usage
+//    StorageFacility facility = new StorageFacility();
+//        facility.add("a14", "ice skates");
+//        facility.add("a14", "ice hockey stick");
+//        facility.add("a14", "ice skates");
+//
+//        facility.add("f156", "rollerblades");
+//        facility.add("f156", "rollerblades");
+//
+//        facility.add("g63", "six");
+//        facility.add("g63", "pi");
+//
+//        facility.remove("f156", "rollerblades");
+//
+//        System.out.println(facility.contents("f156"));
+//
+//        facility.remove("f156", "rollerblades");
+//
+//        System.out.println(facility.storageUnits());
+
+    //Dictionary usage
+//    DictionaryOfManyTranslations dictionary = new DictionaryOfManyTranslations();
+//        dictionary.add("lie", "maata");
+//        dictionary.add("lie", "valehdella");
+//
+//        dictionary.add("bow", "jousi");
+//        dictionary.add("bow", "kumartaa");
+//
+//        System.out.println(dictionary.translate("lie"));
+//        dictionary.remove("bow");
+//        System.out.println(dictionary.translate("bow"));
+
+
+
     //VehicleRegistry and LicensePlate usage
 //    LicensePlate li1 = new LicensePlate("FI", "ABC-123");
 //    LicensePlate li2 = new LicensePlate("FI", "UXE-465");
