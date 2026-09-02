@@ -9,6 +9,17 @@ public class Main {
 
 
 
+    //Box, Item, OneItemBox,MisplacingBox, WeightBox
+//    MisplacingBox box = new MisplacingBox();
+//        box.add(new Item("Saludo", 5));
+//        box.add(new Item("Pirkka", 5));
+//
+//        System.out.println(box.isInBox(new Item("Saludo")));
+//        System.out.println(box.isInBox(new Item("Pirkka")));
+
+
+
+
     //All the warehouse and changehistory classes
 //    ProductWarehouseWithHistory juice = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
 //        juice.takeFromWarehouse(11.3);

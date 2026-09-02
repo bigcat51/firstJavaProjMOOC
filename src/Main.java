@@ -12,8 +12,8 @@ public class Main {
         ArrayList<Person> personList = new ArrayList<>();
         //System.out.println("choose a txt file");
         ArrayList<String> names = new ArrayList<>();
-
-
+        UserInterfaceTree game = new UserInterfaceTree(scanner);
+        game.start();
     }
 
 
