@@ -1,11 +1,97 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
 
     }
+
+
+    //Comparing, sorted, foreach, objects
+//    Scanner scanner = new Scanner(System.in);
+//    List<Person> responses = new ArrayList<>();
+//
+//
+//
+//        while (true) {
+//        System.out.println("Continue personal information input? \"quit\" ends:");
+//        String response = scanner.nextLine();
+//        if (response.equals("quit")) {
+//            break;
+//        }
+//        System.out.println("Input first name");
+//        String name = scanner.nextLine();
+//        System.out.println("Input Last name");
+//        String response2 = scanner.nextLine();
+//
+//        System.out.println("Input Date of birth");
+//        String date = scanner.nextLine();
+//        responses.add(new Person(response, response2, Integer.parseInt(date)));
+//
+//
+//    }
+//        responses.stream()
+//                .sorted(Comparator.comparing(Person::getLastName))
+//            .forEach(value -> System.out.println(value.getLastName()));
+
+
+    //More Streams
+//    Scanner scanner = new Scanner(System.in);
+//    List<Integer> responses = new ArrayList<>();
+//
+//        while (true) {
+//        String response = scanner.nextLine();
+//        if (response.isBlank()) {
+//            break;
+//        }
+//        responses.add(Integer.parseInt(response));
+//    }
+//
+//    ArrayList<Integer> less = responses.stream()
+//            .filter(value -> value >= 1 && value <= 5)
+//            .collect(Collectors.toCollection(ArrayList::new));
+//        less.stream().forEach(value -> System.out.println(value));
+//
+
+    //forEach Stream
+//    Scanner scanner = new Scanner(System.in);
+//    List<String> responses = new ArrayList<>();
+//
+//    while (true) {
+//       String response = scanner.nextLine();
+//       if (response.isBlank()) {
+//           break;
+//       }
+//       responses.add(response);
+//    }
+//
+//    responses.stream()
+//            .forEach(value -> System.out.println(value));
+
+
+
+
+    //More streams, StaticMethods
+    //        ArrayList<Integer> numbers = new ArrayList<>();
+//        numbers.add(3);
+//        numbers.add(2);
+//        numbers.add(-17);
+//        numbers.add(-5);
+//        numbers.add(7);
+//
+//        ArrayList<Integer> divisible = StaticMethods.divisible(numbers);
+//
+//        divisible.stream()
+//                .forEach(num -> System.out.println(num));
+
+//        List<Integer> numbers = new ArrayList<>();
+//        numbers.add(2);
+//        numbers.add(5);
+//        numbers.add(8);
+//        numbers.add(3);
+//        numbers.add(10);
+//
+//        System.out.println(StaticMethods.positive(numbers));
 
 
     //Example 2
