@@ -1,10 +1,45 @@
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
 
+        List<UNESCO> people = new ArrayList<>();
+        try {
+            people = Files.lines(Paths.get("literacy.csv"))
+                    .map(value -> {
+                        if (value instanceof String) {
+                            Integer.parseInt(value);
+                        }
+                        return value.split(",");
+                    })
+                    .map(val -> new UNESCO(
+                            val[0].trim(),
+                            val[1].trim(),
+                            val[2].trim(),
+                            val[3].trim(),
+                            Integer.parseInt(val[4].trim()),
+                            Integer.parseInt(val[5].trim())
+                    ))
+                    .toList();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        Collections.sort(people);
+        people.forEach(value -> System.out.println(value.getLiteracyPercent()));
     }
+
+
+    //Person with wage
+//    List<PersonWithWage> peopleList = new ArrayList<>();
+//        peopleList.add(new PersonWithWage("John", 50000));
+//        peopleList.add(new PersonWithWage("Johny", 5003));
+//        peopleList.add(new PersonWithWage("Billy", 5000));
+//        peopleList.stream().forEach(System.out::println);
+//        Collections.sort(peopleList);
+//        peopleList.stream().forEach(value -> System.out.println(value));
 
 
     //Comparing, sorted, foreach, objects
