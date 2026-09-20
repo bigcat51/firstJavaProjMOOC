@@ -4,9 +4,9 @@ public class UNESCO implements Comparable<UNESCO>{
     private String gender;
     private String country;
     private int year;
-    private int literacyPercent;
+    private double literacyPercent;
 
-    public UNESCO(String theme, String ageGroup, String gender, String country, int year, int literacyPercent) {
+    public UNESCO(String theme, String ageGroup, String gender, String country, int year, double literacyPercent) {
         this.theme = theme;
         this.ageGroup = ageGroup;
         this.gender = gender;
@@ -15,13 +15,19 @@ public class UNESCO implements Comparable<UNESCO>{
         this.literacyPercent = literacyPercent;
     }
 
-    public int getLiteracyPercent() {
+    public double getLiteracyPercent() {
         return literacyPercent;
     }
 
 
     @Override
     public int compareTo(UNESCO o) {
-        return this.literacyPercent - o.getLiteracyPercent();
+        if (this.literacyPercent < o.literacyPercent){
+            return -1;
+        }else if (this.literacyPercent > o.literacyPercent){
+            return 1;
+        }else {
+            return 0;
+        }
     }
 }

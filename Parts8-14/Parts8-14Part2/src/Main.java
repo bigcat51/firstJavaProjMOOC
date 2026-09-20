@@ -1,35 +1,113 @@
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
+        Hand hand1 = new Hand();
 
-        List<UNESCO> people = new ArrayList<>();
-        try {
-            people = Files.lines(Paths.get("literacy.csv"))
-                    .map(value -> {
-                        if (value instanceof String) {
-                            Integer.parseInt(value);
-                        }
-                        return value.split(",");
-                    })
-                    .map(val -> new UNESCO(
-                            val[0].trim(),
-                            val[1].trim(),
-                            val[2].trim(),
-                            val[3].trim(),
-                            Integer.parseInt(val[4].trim()),
-                            Integer.parseInt(val[5].trim())
-                    ))
-                    .toList();
-        } catch (Exception e) {
-            System.out.println(e);
+        hand1.add(new Card(2, Suit.DIAMOND));
+        hand1.add(new Card(14, Suit.SPADE));
+        hand1.add(new Card(12, Suit.HEART));
+        hand1.add(new Card(2, Suit.SPADE));
+
+        Hand hand2 = new Hand();
+
+        hand2.add(new Card(11, Suit.DIAMOND));
+        hand2.add(new Card(11, Suit.SPADE));
+        hand2.add(new Card(11, Suit.HEART));
+
+        int comparison = hand1.compareTo(hand2);
+
+        if (comparison < 0) {
+            System.out.println("better hand is");
+            hand2.print();
+        } else if (comparison > 0){
+            System.out.println("better hand is");
+            hand1.print();
+        } else {
+            System.out.println("hands are equal");
         }
-
-        Collections.sort(people);
-        people.forEach(value -> System.out.println(value.getLiteracyPercent()));
     }
+
+    //Education, Person2, Employees
+//    Employees university = new Employees();
+//        university.add(new Person2("Petrus", Education.PHD));
+//        university.add(new Person2("Arto", Education.HS));
+//        university.add(new Person2("Elina", Education.PHD));
+//
+//        university.print();
+//
+//        university.fire(Education.HS);
+//
+//        System.out.println("==");
+//
+//        university.print();
+
+
+
+    //Checker
+//    Scanner scanner = new Scanner(System.in);
+//
+//        while (true) {
+//        System.out.print("Input string:");
+//        String response = scanner.nextLine();
+//        if (response.isEmpty()) {
+//            break;
+//        }
+//        //System.out.println(Checker.isDayOfTheWeek(response));
+//        //System.out.println(Checker.allVowels(response));
+//        System.out.println(Checker.timeOfDay(response));
+//
+//    }
+
+
+
+    //Testing StringBuiilder
+//    String string = "trololololololololo";
+//    StringBuilder poopy = new StringBuilder();
+//
+//        poopy.append(4);
+//        poopy.append(34);
+//
+//        System.out.println(poopy);
+//        System.out.println(poopy.toString());
+//
+//        if (string.matches("trolo(lo)*")) {
+//        System.out.println("Correct form.");
+//    } else {
+//        System.out.println("Incorrect form.");
+//    }
+
+
+
+    //Book, BookInterface
+//    Scanner scanner = new Scanner(System.in);
+//    BookInterface userInterface = new BookInterface(scanner);
+//        userInterface.start();
+
+
+    //UNESCO
+    //List<UNESCO> people = new ArrayList<>();
+    //        try {
+    //            people = Files.lines(Paths.get("literacy.csv"))
+    //                    .map(value -> value.split(","))
+    //                    .map(value -> new UNESCO(
+    //                            value[0],
+    //                            value[1],
+    //                            value[2],
+    //                            value[3],
+    //                            Integer.parseInt(value[4]),
+    //                            Double.parseDouble(value[5])))
+    //                    .collect(Collectors.toList());
+    //
+    //        } catch (Exception e) {
+    //            System.out.println(e);
+    //        }
+    //
+    //        Collections.sort(people);
+    //        people.forEach(value -> System.out.println(value.getLiteracyPercent()));
 
 
     //Person with wage
