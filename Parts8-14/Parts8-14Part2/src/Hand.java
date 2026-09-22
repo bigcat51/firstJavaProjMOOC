@@ -35,9 +35,10 @@ public class Hand implements Comparable<Hand>{
       return sum;
     }
 
-    public List<Card> sortBySuit(List<Card> cards) {
-        List<Card> card =
-        Collections.sort(cards, (c1, c2) -> c1.getSuit().ordinal() - c2.getSuit().ordinal());
+    public static List<Card> sortBySuit(List<Card> cards) {
+        List<Card> card = cards;
+        Collections.sort(card, (c1, c2) -> c1.getSuit().ordinal() - c2.getSuit().ordinal());
+        return card;
     }
 
     @Override
