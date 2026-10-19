@@ -1,10 +1,4 @@
-public class Shape {
-
-    public double getArea(double length, double width) {
-        return length * width;
-    }
-
-    public double getPerimeter(double length, double width) {
-        return 2 * (length + width);
-    }
+public interface Shape {
+    public double getArea();
+    public double getPerimeter();
 }
